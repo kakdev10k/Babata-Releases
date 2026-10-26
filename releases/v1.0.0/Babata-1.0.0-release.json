@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "releaseDate": "2026-10-27",
+  "timezone": "Asia/Phnom_Penh",
+  "platform": "win32",
+  "arch": "x64",
+  "applicationSourceCommit": "bbee30f881f0538b2422c99a5505706351964e5a",
+  "installer": {
+    "name": "Babata-Setup-1.0.0-x64.exe",
+    "bytes": 124974311,
+    "sha256": "ee5fbe5e4ea4f6b80ccec3611921bdde8f998c32a1136c543dd6876ea1f3c5f2",
+    "signature": "unsigned",
+    "includesOcrRuntime": false,
+    "includesModelWeights": false
+  },
+  "distribution": {
+    "application": "GitHub Releases",
+    "runtime": "Cloudflare R2",
+    "models": "Official Paddle sources only",
+    "optionalNvidiaGpuRuntime": true
+  },
+  "validation": {
+    "installedDesktopChecks": 22,
+    "freshPackagedSetupChecks": 4,
+    "installExit": 0,
+    "uninstallExit": 0,
+    "externalComponentsRetained": true,
+    "cleanWindowsVm": false
+  }
+}
