@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "version": "1.0.1",
+  "preparedDate": "2026-10-28",
+  "timezone": "Asia/Phnom_Penh",
+  "platform": "win32",
+  "arch": "x64",
+  "release": {
+    "repository": "kakdev10k/Babata-Releases",
+    "tag": "v1.0.1",
+    "title": "Babata OCR v1.0.1 — Animated icon, sounds & app updates"
+  },
+  "source": {
+    "baseCommit": "d3a7f7ceac2ecc93b934917821c2b4df53240c07",
+    "uncommittedChanges": true,
+    "inputSha256": "10ad2137e80936fa868cff48d83f8b3df6b97f4405e26442f0c1017fbb3cd0f6",
+    "applicationArchiveSha256": "edcafb97ce115daf669bfd838749a75125315bacb02b6e8dd52f14caba6bec11"
+  },
+  "installer": {
+    "name": "Babata-Setup-1.0.1-x64.exe",
+    "bytes": 126802980,
+    "sha256": "35d9ed3f4e2fbbf8e9a3ba1efb1ac43cdb1d2a751661fcc48db291d655111456",
+    "signature": "unsigned",
+    "includesOcrRuntime": false,
+    "includesModelWeights": false
+  },
+  "updates": {
+    "source": "https://github.com/kakdev10k/Babata-Releases",
+    "automaticChecks": true,
+    "installation": "manual",
+    "frameworkMetadataRequired": false,
+    "requiresManualBootstrapFromOriginal100": true
+  },
+  "distribution": {
+    "application": "GitHub Releases",
+    "runtime": "Cloudflare R2 (unchanged)",
+    "models": "Official Paddle sources only (unchanged)"
+  },
+  "validation": {
+    "typeScriptPassed": 59,
+    "typeScriptSkipped": 2,
+    "pythonWorkerPassed": 5,
+    "packagedFloatingSoundChecks": 20,
+    "packagedDesktopChecks": 21,
+    "cpuRecognitionFixtures": 4,
+    "animationFallbackVariants": 2,
+    "packagedUpdateWorkflowChecks": 5,
+    "preparedUpdateMetadataContract": true,
+    "installerPayloadMatchesTestedApp": true,
+    "automaticInstallerExecutionDeferred": true,
+    "realInstalledUpgradeDeferred": true,
+    "cleanWindowsVm": false
+  },
+  "releaseNotesSha256": "58b85c5cb73082d83671a3d46d32dc1d0cec387393f67c589bd25b2ef8ef7449"
+}

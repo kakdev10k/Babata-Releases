@@ -8,12 +8,16 @@ This public repository contains installers, checksums and release notes. Applica
 
 ## Install
 
-1. Download `Babata-Setup-1.0.0-x64.exe` from the release assets and run it.
+1. Download `Babata-Setup-1.0.1-x64.exe` from the release assets and run it. Quit any running Babata instance first.
 2. Launch Babata and complete Offline OCR setup. An internet connection is required for this initial setup.
 3. Babata downloads its CPU runtime from Cloudflare R2 and the required OCR models directly from official Paddle sources. The installer includes neither runtime nor model weights. You do not need to install Python.
 4. After verification and a recognition test, capture text with **Ctrl + Alt + O** or the floating button. OCR then works offline.
 
 Chinese and English are the default configuration, including Simplified and Traditional Chinese. Japanese shares the same model pack. Korean and Thai recognition packs are optional downloads. Recognition can make mistakes; review important text.
+
+## Application updates
+
+Version 1.0.1 adds animated floating icons, notification sounds and **Settings -> General -> App Updates**. Stable releases can be detected and downloaded in the app; installation remains manual. The original v1.0.0 has no updater, so install v1.0.1 manually once to get update checking. Animation and sound preferences are saved, and reduced motion or missing/broken animation files use PNG safely.
 
 ## Optional GPU acceleration
 
