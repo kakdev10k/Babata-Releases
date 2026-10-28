@@ -21,6 +21,8 @@ Version 1.0.2 adds reviewed GPU runtime v2, background OCR model loading/warm-up
 
 ## Optional GPU acceleration
 
+**GPU runtime v1 has been retired from hosting.** Users of Babata v1.0.0 or v1.0.1 must update to v1.0.2 or later before downloading or repairing GPU acceleration. Already installed local runtimes continue to work. The shared CPU runtime remains hosted and is still required by v1.0.2.
+
 Open **Settings → Advanced → OCR backend** after completing the base setup. Supported NVIDIA GPUs can download the optional **2.45 GiB** v2 runtime. It includes cuDNN 9.9.0.52 matching Paddle's binary build target. This backend requires compute capability 7.5 or newer and a compatible NVIDIA driver; actual native and recognition tests determine readiness. Installing the CUDA Toolkit is not required. Physical GPU tests used an RTX 4050 laptop, not every GPU/driver combination.
 
 **Updating from an earlier GPU runtime:** click **Download GPU acceleration** to install v2. Previous runtime files are kept, existing models are reused, and CPU OCR stays available while GPU setup is pending. CPU-only users do not need a new runtime or model pack for this update.
