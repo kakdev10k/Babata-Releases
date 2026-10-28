@@ -8,7 +8,7 @@ This public repository contains installers, checksums and release notes. Applica
 
 ## Install
 
-1. Download `Babata-Setup-1.0.2-x64.exe` from the release assets and run it manually. Quit any running Babata instance first.
+1. Download `Babata-Setup-1.0.3-x64.exe` from the release assets and run it manually. Quit any running Babata instance first.
 2. Launch Babata and complete Offline OCR setup. An internet connection is required for this initial setup.
 3. Babata downloads its CPU runtime from Cloudflare R2 and the required OCR models directly from official Paddle sources. The installer includes neither runtime nor model weights. You do not need to install Python.
 4. After verification and a recognition test, capture text with **Ctrl + Alt + O** or the floating button. OCR then works offline.
@@ -17,17 +17,19 @@ Chinese and English are the default configuration, including Simplified and Trad
 
 ## Application updates
 
-Version 1.0.2 adds reviewed GPU runtime v2, background OCR model loading/warm-up, and a live backend dashboard. Animated icons, both notification sounds and their saved preferences are preserved. Stable releases can be detected and downloaded through **Settings -> General -> App Updates**; installation remains manual. The original v1.0.0 has no updater, so install the latest version manually once to get update checking. Reduced motion or missing/broken animation files use PNG safely.
+Version 1.0.3 adds architecture-aware NVIDIA runtime selection, including CUDA 12.9 v3 for the tested RTX 5070 Ti. Compatible installed runtimes are reused. Background OCR warm-up, the live backend dashboard, animations, both sounds, and saved preferences are preserved. Stable releases can be detected and downloaded through **Settings -> General -> App Updates**; installation remains manual. The original v1.0.0 has no updater, so install the latest version manually once to get update checking. Reduced motion or missing/broken animation files use PNG safely.
 
 ## Optional GPU acceleration
 
-**GPU runtime v1 has been retired from hosting.** Users of Babata v1.0.0 or v1.0.1 must update to v1.0.2 or later before downloading or repairing GPU acceleration. Already installed local runtimes continue to work. The shared CPU runtime remains hosted and is still required by v1.0.2.
+**GPU runtime v1 has been retired from hosting.** Users of Babata v1.0.0 or v1.0.1 must update to v1.0.2 or later before downloading or repairing GPU acceleration. Already installed local runtimes continue to work. The shared CPU runtime remains hosted and is still required by current releases.
 
-Open **Settings → Advanced → OCR backend** after completing the base setup. Supported NVIDIA GPUs can download the optional **2.45 GiB** v2 runtime. It includes cuDNN 9.9.0.52 matching Paddle's binary build target. This backend requires compute capability 7.5 or newer and a compatible NVIDIA driver; actual native and recognition tests determine readiness. Installing the CUDA Toolkit is not required. Physical GPU tests used an RTX 4050 laptop, not every GPU/driver combination.
+Open **Settings -> Advanced -> OCR backend** after base setup. Babata selects a reviewed NVIDIA runtime by compute capability: CUDA 12.6 v2 (about **2.45 GiB**) for reviewed older architectures, or CUDA 12.9 v3 (about **3.10 GiB**) for Blackwell capability 12.0. The catalog covers native targets 7.5, 8.0, 8.6, 8.9, and 12.0, with compatible same-major higher-minor targets followed by real validation. Unreviewed architectures keep CPU OCR available. Installing the CUDA Toolkit is not required; a compatible NVIDIA driver is required.
 
-**Updating from an earlier GPU runtime:** click **Download GPU acceleration** to install v2. Previous runtime files are kept, existing models are reused, and CPU OCR stays available while GPU setup is pending. CPU-only users do not need a new runtime or model pack for this update.
+Existing compatible v2 or v3 installations are reused. RTX 50-series users should update to **v1.0.3**, then download the offered GPU runtime and wait for validation. CPU runtime and existing compatible model downloads are unchanged. Previous runtime files remain until a replacement passes verification.
 
-Leave the processing device on **Automatic** to use the verified GPU runtime. **CPU only** is also available. GPU execution failures retry recognition on CPU and report the fallback. AMD and Intel GPU acceleration are not included in this release. The same OCR models are reused.
+Babata checks actual worker build targets, runs a CUDA kernel, validates both OCR predictors, and verifies recognition before showing **GPU Inference Active**. Local automated tests used an RTX 4050 laptop; an RTX 5070 Ti user separately confirmed successful setup and accurate normal OCR. Every GPU/driver combination is not certified.
+
+Leave the processing device on **Automatic** to use verified acceleration, or select **CPU only**. GPU failures can fall back to CPU and retain diagnostic details. AMD and Intel adapters use CPU OCR with this backend. GPU and CPU share the same OCR models.
 
 ## Privacy and local data
 

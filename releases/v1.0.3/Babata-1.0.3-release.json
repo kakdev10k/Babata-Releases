@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "version": "1.0.3",
+  "preparedDate": "2026-10-28",
+  "timezone": "Asia/Phnom_Penh",
+  "platform": "win32",
+  "arch": "x64",
+  "release": {
+    "repository": "kakdev10k/Babata-Releases",
+    "tag": "v1.0.3",
+    "title": "Babata OCR v1.0.3 — RTX 50 GPU support & compatibility fixes"
+  },
+  "source": {
+    "baseCommit": "7ffb04f94d6649c9013aa32102f174c43b7e421e",
+    "uncommittedApplicationChanges": false,
+    "inputSha256": "518eda891502dfa48f52a362355cd6e8b213d52ebbde589f9af56ac8f449641e",
+    "applicationArchiveSha256": "427415694b325ffc82a3b494ea9a1ca8126e2c27aa2ef0b43336604a95e838f4"
+  },
+  "installer": {
+    "name": "Babata-Setup-1.0.3-x64.exe",
+    "bytes": 126815101,
+    "sha256": "a6680c8fa5f157dadea00d67195f4df3ccbe172818d81edd7d38ded2bd06499c",
+    "signature": "unsigned",
+    "includesOcrRuntime": false,
+    "includesModelWeights": false
+  },
+  "updates": {
+    "source": "https://github.com/kakdev10k/Babata-Releases",
+    "automaticChecks": true,
+    "installation": "manual",
+    "frameworkMetadataRequired": false
+  },
+  "distribution": {
+    "application": "GitHub Releases",
+    "runtime": "Cloudflare R2; GPU revisions v2 and v3; CPU unchanged",
+    "models": "Official Paddle sources only; unchanged"
+  },
+  "gpuRuntime": {
+    "id": "paddleocr-3.7.0-paddle-gpu-3.3.1-cu129-cp312-win-x64-v3",
+    "bytes": 3331222093,
+    "sha256": "d0f2901d41f9be738dfca08fcafff87f7a14f9faa8ba21abf958eaf70ba94f47",
+    "parts": 16,
+    "cuda": "12.9",
+    "nativeTargets": [
+      75,
+      80,
+      86,
+      89,
+      120
+    ],
+    "cudnn": "9.9.0.52",
+    "physicalGpuTested": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "externalUserValidated": "RTX 5070 Ti: successful setup and accurate normal OCR reported by user; no full external fixture benchmark",
+    "compatibleInstalledRuntimeReused": true,
+    "optionalDownloadForBlackwell": true
+  },
+  "validation": {
+    "typeScriptPassed": 88,
+    "typeScriptSkipped": 2,
+    "pythonWorkerPassed": 12,
+    "packagedDashboardChecks": 8,
+    "packagedOcrLifecycleChecks": 10,
+    "publicRuntimeInstallationChecks": 6,
+    "packagedDesktopChecks": 20,
+    "packagedFloatingSoundChecks": 20,
+    "installerPayloadFilesMatched": 109,
+    "runtimePublicFullSha256": true,
+    "runtimeResumeAndOfflineReuse": true,
+    "automaticInstallerExecutionDeferred": true,
+    "realInstalledUpgradeDeferred": true,
+    "cleanWindowsVm": false
+  },
+  "releaseNotesSha256": "f1e0fe9e98cfb794cc61f64d7970bf133f5de33a1e880f6dbcb8c784255ca65c"
+}

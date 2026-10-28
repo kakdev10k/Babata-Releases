@@ -1,0 +1,2 @@
+a6680c8fa5f157dadea00d67195f4df3ccbe172818d81edd7d38ded2bd06499c  Babata-Setup-1.0.3-x64.exe
+f9044db7dbf97ed9d2f89b7b17be0de772ec206fc652b3b4bac3028a3d778e1c  Babata-1.0.3-release.json
