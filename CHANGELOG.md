@@ -1,5 +1,11 @@
 # Release history
 
+## 1.0.4 - 2026-10-29
+
+Verified backend download-cache cleanup after installation and at engine readiness. New GPU downloads/repairs use runtime v3; compatible installed runtimes, CPU OCR and models remain available. Resumable partial transfers are preserved.
+
+[Release notes and installer](https://github.com/kakdev10k/Babata-Releases/releases/tag/v1.0.4)
+
 ## 1.0.3 - 2026-10-28
 
 Babata OCR v1.0.3 improves NVIDIA GPU compatibility, including the tested RTX 5070 Ti.

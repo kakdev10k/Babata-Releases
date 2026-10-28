@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "version": "1.0.4",
+  "preparedDate": "2026-10-29",
+  "timezone": "Asia/Phnom_Penh",
+  "platform": "win32",
+  "arch": "x64",
+  "release": {
+    "repository": "kakdev10k/Babata-Releases",
+    "tag": "v1.0.4",
+    "title": "Babata OCR v1.0.4 — Automatic backend cleanup & GPU runtime v3"
+  },
+  "source": {
+    "baseCommit": "4847855e892d170ad0ea2a52e072fb231e847c03",
+    "uncommittedApplicationChanges": false,
+    "inputSha256": "aff714f54544b45fb798030631fadd58ebace07f9345193ffe9b85fc2266bbac",
+    "applicationArchiveSha256": "95b363dd4696a2073a8d34c994d8f767cf008dda3876b0ea2c8dbef62b441477"
+  },
+  "installer": {
+    "name": "Babata-Setup-1.0.4-x64.exe",
+    "bytes": 126816845,
+    "sha256": "492fcd72d71bd9ea0b31193f1593941bc3982f15acccceab8d822f50521c2198",
+    "signature": "unsigned",
+    "includesOcrRuntime": false,
+    "includesModelWeights": false
+  },
+  "updates": {
+    "source": "https://github.com/kakdev10k/Babata-Releases",
+    "automaticChecks": true,
+    "installation": "manual",
+    "frameworkMetadataRequired": false
+  },
+  "distribution": {
+    "application": "GitHub Releases",
+    "runtime": "Cloudflare R2; new GPU downloads use v3; required CPU unchanged; installed v2 reuse supported",
+    "models": "Official Paddle sources only; unchanged"
+  },
+  "gpuRuntime": {
+    "id": "paddleocr-3.7.0-paddle-gpu-3.3.1-cu129-cp312-win-x64-v3",
+    "bytes": 3331222093,
+    "sha256": "d0f2901d41f9be738dfca08fcafff87f7a14f9faa8ba21abf958eaf70ba94f47",
+    "parts": 16,
+    "cuda": "12.9",
+    "nativeTargets": [
+      75,
+      80,
+      86,
+      89,
+      120
+    ],
+    "cudnn": "9.9.0.52",
+    "physicalGpuTested": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "priorExternalUserValidation": "Unchanged v3 runtime previously passed user-confirmed RTX 5070 Ti setup and accurate OCR; no new external hardware run",
+    "compatibleInstalledRuntimeReused": true,
+    "newAndRepairDownloads": "v3 only"
+  },
+  "backendDownloadCleanup": {
+    "afterValidatedInstallation": true,
+    "onInstalledEngineReadiness": true,
+    "preservesPartialGroups": true,
+    "preservesInstalledComponents": true,
+    "recursiveDeletion": false
+  },
+  "validation": {
+    "typeScriptPassed": 102,
+    "typeScriptSkipped": 2,
+    "pythonWorkerPassed": 12,
+    "packagedBackendCacheChecks": 7,
+    "packagedDesktopChecks": 20,
+    "installerPayloadFilesMatched": 109,
+    "webmAssetsMatchBuild": 5,
+    "mp3AssetsMatchBuild": 2,
+    "unchangedRuntimeFullPublicSha256VerifiedAt": "2026-10-28T16:04:11.055Z",
+    "unchangedRuntimeVerificationSource": "artifacts/release-1.0.3/runtime-host-verification.json",
+    "runtimeUrlsAndMetadataRecheckedAt": "2026-10-28T17:35:01.965Z",
+    "automaticInstallerExecutionDeferred": true,
+    "realInstalledUpgradeDeferred": true,
+    "cleanWindowsVm": false
+  },
+  "releaseNotesSha256": "0c162e7a04085db3d4987132ae18606cadb55647b99a5b73c93d509de6896fa8"
+}

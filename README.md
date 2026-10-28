@@ -8,7 +8,7 @@ This public repository contains installers, checksums and release notes. Applica
 
 ## Install
 
-1. Download `Babata-Setup-1.0.3-x64.exe` from the release assets and run it manually. Quit any running Babata instance first.
+1. Download `Babata-Setup-1.0.4-x64.exe` from the release assets and run it manually. Quit any running Babata instance first.
 2. Launch Babata and complete Offline OCR setup. An internet connection is required for this initial setup.
 3. Babata downloads its CPU runtime from Cloudflare R2 and the required OCR models directly from official Paddle sources. The installer includes neither runtime nor model weights. You do not need to install Python.
 4. After verification and a recognition test, capture text with **Ctrl + Alt + O** or the floating button. OCR then works offline.
@@ -17,15 +17,13 @@ Chinese and English are the default configuration, including Simplified and Trad
 
 ## Application updates
 
-Version 1.0.3 adds architecture-aware NVIDIA runtime selection, including CUDA 12.9 v3 for the tested RTX 5070 Ti. Compatible installed runtimes are reused. Background OCR warm-up, the live backend dashboard, animations, both sounds, and saved preferences are preserved. Stable releases can be detected and downloaded through **Settings -> General -> App Updates**; installation remains manual. The original v1.0.0 has no updater, so install the latest version manually once to get update checking. Reduced motion or missing/broken animation files use PNG safely.
+Version 1.0.4 removes verified backend download archives after successful installation and recognition validation, and cleans eligible installed-component caches at startup. New GPU downloads and repairs use runtime v3; compatible installed runtimes are reused. Partial transfers and installed runtimes/models are preserved. Check **Settings -> General -> App Updates** to download the update, then quit Babata and install manually. The original v1.0.0 requires a manual update to gain update checking. Animations, notification sounds, OCR warm-up and saved preferences are preserved.
 
 ## Optional GPU acceleration
 
 **GPU runtime v1 has been retired from hosting.** Users of Babata v1.0.0 or v1.0.1 must update to v1.0.2 or later before downloading or repairing GPU acceleration. Already installed local runtimes continue to work. The shared CPU runtime remains hosted and is still required by current releases.
 
-Open **Settings -> Advanced -> OCR backend** after base setup. Babata selects a reviewed NVIDIA runtime by compute capability: CUDA 12.6 v2 (about **2.45 GiB**) for reviewed older architectures, or CUDA 12.9 v3 (about **3.10 GiB**) for Blackwell capability 12.0. The catalog covers native targets 7.5, 8.0, 8.6, 8.9, and 12.0, with compatible same-major higher-minor targets followed by real validation. Unreviewed architectures keep CPU OCR available. Installing the CUDA Toolkit is not required; a compatible NVIDIA driver is required.
-
-Existing compatible v2 or v3 installations are reused. RTX 50-series users should update to **v1.0.3**, then download the offered GPU runtime and wait for validation. CPU runtime and existing compatible model downloads are unchanged. Previous runtime files remain until a replacement passes verification.
+Open **Settings -> Advanced -> OCR backend** after base setup. In v1.0.4, new NVIDIA GPU installations and repairs use CUDA 12.9 runtime v3 (about **3.10 GiB**), covering reviewed native targets 7.5, 8.0, 8.6, 8.9 and 12.0, followed by actual inference validation. Compatible installed v2/v3 runtimes remain reusable. Unreviewed architectures retain CPU OCR. A compatible NVIDIA driver is required; installing the CUDA Toolkit is unnecessary. CPU runtime and model sources are unchanged. GPU v2 hosting has not been retired by this publication.
 
 Babata checks actual worker build targets, runs a CUDA kernel, validates both OCR predictors, and verifies recognition before showing **GPU Inference Active**. Local automated tests used an RTX 4050 laptop; an RTX 5070 Ti user separately confirmed successful setup and accurate normal OCR. Every GPU/driver combination is not certified.
 
