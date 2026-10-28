@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "version": "1.0.2",
+  "preparedDate": "2026-10-28",
+  "timezone": "Asia/Phnom_Penh",
+  "platform": "win32",
+  "arch": "x64",
+  "release": {
+    "repository": "kakdev10k/Babata-Releases",
+    "tag": "v1.0.2",
+    "title": "Babata OCR v1.0.2 — GPU compatibility, faster startup & live status"
+  },
+  "source": {
+    "baseCommit": "c9543bd6546676abbc1b12158d44940ed38e12e4",
+    "uncommittedApplicationChanges": false,
+    "inputSha256": "325e47c9b47161d6ecf642d5f829014c1b16343b536628d4ed89b49df42b105d",
+    "applicationArchiveSha256": "347ab9cbe8f1f1513e4ffe6871123d0039a581e48448e23180c28044336b51a6"
+  },
+  "installer": {
+    "name": "Babata-Setup-1.0.2-x64.exe",
+    "bytes": 126811307,
+    "sha256": "c31016b2422caa48f938f537d06d56c7f867c26a6066305e56ec419521183beb",
+    "signature": "unsigned",
+    "includesOcrRuntime": false,
+    "includesModelWeights": false
+  },
+  "updates": {
+    "source": "https://github.com/kakdev10k/Babata-Releases",
+    "automaticChecks": true,
+    "installation": "manual",
+    "frameworkMetadataRequired": false
+  },
+  "distribution": {
+    "application": "GitHub Releases",
+    "runtime": "Cloudflare R2; GPU revision v2; CPU unchanged",
+    "models": "Official Paddle sources only; unchanged"
+  },
+  "gpuRuntime": {
+    "id": "paddleocr-3.7.0-paddle-gpu-3.3.1-cu126-cp312-win-x64-v2",
+    "bytes": 2627608141,
+    "sha256": "74fdac1b1e40ae9290e18945205a0323c68f6862d6f9923d3e83f66558b8a02b",
+    "parts": 13,
+    "cudnn": "9.9.0.52",
+    "physicalGpuTested": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "existingGpuUsersRequireOptionalRuntimeDownload": true
+  },
+  "validation": {
+    "typeScriptPassed": 80,
+    "typeScriptSkipped": 2,
+    "pythonWorkerPassed": 9,
+    "packagedDashboardChecks": 8,
+    "packagedOcrLifecycleChecks": 10,
+    "publicRuntimeInstallationChecks": 6,
+    "packagedDesktopChecks": 20,
+    "packagedFloatingSoundChecks": 20,
+    "installerPayloadFilesMatched": 108,
+    "runtimePublicFullSha256": true,
+    "runtimeResumeAndOfflineReuse": true,
+    "automaticInstallerExecutionDeferred": true,
+    "realInstalledUpgradeDeferred": true,
+    "cleanWindowsVm": false
+  },
+  "releaseNotesSha256": "2e40eda82f9bf76114d2e15bced41bc7c5d58552aa96a8c90fae6ed305bcfcb1"
+}

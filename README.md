@@ -8,7 +8,7 @@ This public repository contains installers, checksums and release notes. Applica
 
 ## Install
 
-1. Download `Babata-Setup-1.0.1-x64.exe` from the release assets and run it. Quit any running Babata instance first.
+1. Download `Babata-Setup-1.0.2-x64.exe` from the release assets and run it manually. Quit any running Babata instance first.
 2. Launch Babata and complete Offline OCR setup. An internet connection is required for this initial setup.
 3. Babata downloads its CPU runtime from Cloudflare R2 and the required OCR models directly from official Paddle sources. The installer includes neither runtime nor model weights. You do not need to install Python.
 4. After verification and a recognition test, capture text with **Ctrl + Alt + O** or the floating button. OCR then works offline.
@@ -17,11 +17,13 @@ Chinese and English are the default configuration, including Simplified and Trad
 
 ## Application updates
 
-Version 1.0.1 adds animated floating icons, notification sounds and **Settings -> General -> App Updates**. Stable releases can be detected and downloaded in the app; installation remains manual. The original v1.0.0 has no updater, so install v1.0.1 manually once to get update checking. Animation and sound preferences are saved, and reduced motion or missing/broken animation files use PNG safely.
+Version 1.0.2 adds reviewed GPU runtime v2, background OCR model loading/warm-up, and a live backend dashboard. Animated icons, both notification sounds and their saved preferences are preserved. Stable releases can be detected and downloaded through **Settings -> General -> App Updates**; installation remains manual. The original v1.0.0 has no updater, so install the latest version manually once to get update checking. Reduced motion or missing/broken animation files use PNG safely.
 
 ## Optional GPU acceleration
 
-Open **Settings → Advanced → GPU acceleration** after completing the base setup. Supported NVIDIA GPUs can download the optional **2.26 GiB** runtime. This build requires compute capability 7.5 or newer and Windows driver 561 or newer. A compatible NVIDIA driver is required; installing the CUDA Toolkit is not required.
+Open **Settings → Advanced → OCR backend** after completing the base setup. Supported NVIDIA GPUs can download the optional **2.45 GiB** v2 runtime. It includes cuDNN 9.9.0.52 matching Paddle's binary build target. This backend requires compute capability 7.5 or newer and a compatible NVIDIA driver; actual native and recognition tests determine readiness. Installing the CUDA Toolkit is not required. Physical GPU tests used an RTX 4050 laptop, not every GPU/driver combination.
+
+**Updating from an earlier GPU runtime:** click **Download GPU acceleration** to install v2. Previous runtime files are kept, existing models are reused, and CPU OCR stays available while GPU setup is pending. CPU-only users do not need a new runtime or model pack for this update.
 
 Leave the processing device on **Automatic** to use the verified GPU runtime. **CPU only** is also available. GPU execution failures retry recognition on CPU and report the fallback. AMD and Intel GPU acceleration are not included in this release. The same OCR models are reused.
 
