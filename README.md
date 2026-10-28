@@ -21,9 +21,9 @@ Version 1.0.4 removes verified backend download archives after successful instal
 
 ## Optional GPU acceleration
 
-**GPU runtime v1 has been retired from hosting.** Users of Babata v1.0.0 or v1.0.1 must update to v1.0.2 or later before downloading or repairing GPU acceleration. Already installed local runtimes continue to work. The shared CPU runtime remains hosted and is still required by current releases.
+**GPU runtimes v1 and v2 have been retired from hosting.** Update to **v1.0.4 or later** before downloading or repairing GPU acceleration. Already installed local runtimes continue to work. The shared CPU runtime remains hosted and is still required by current releases.
 
-Open **Settings -> Advanced -> OCR backend** after base setup. In v1.0.4, new NVIDIA GPU installations and repairs use CUDA 12.9 runtime v3 (about **3.10 GiB**), covering reviewed native targets 7.5, 8.0, 8.6, 8.9 and 12.0, followed by actual inference validation. Compatible installed v2/v3 runtimes remain reusable. Unreviewed architectures retain CPU OCR. A compatible NVIDIA driver is required; installing the CUDA Toolkit is unnecessary. CPU runtime and model sources are unchanged. GPU v2 hosting has not been retired by this publication.
+Open **Settings -> Advanced -> OCR backend** after base setup. In v1.0.4, new NVIDIA GPU installations and repairs use CUDA 12.9 runtime v3 (about **3.10 GiB**), covering reviewed native targets 7.5, 8.0, 8.6, 8.9 and 12.0, followed by actual inference validation. Compatible installed v2/v3 runtimes remain reusable. Unreviewed architectures retain CPU OCR. A compatible NVIDIA driver is required; installing the CUDA Toolkit is unnecessary. CPU runtime and model sources are unchanged. Only the required CPU runtime and GPU v3 runtime remain hosted; older apps must update to v1.0.4 before new GPU installation or repair.
 
 Babata checks actual worker build targets, runs a CUDA kernel, validates both OCR predictors, and verifies recognition before showing **GPU Inference Active**. Local automated tests used an RTX 4050 laptop; an RTX 5070 Ti user separately confirmed successful setup and accurate normal OCR. Every GPU/driver combination is not certified.
 
